@@ -1,0 +1,383 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* END MEYERS RESET */
+
+/* VARIABLES */
+
+:root {
+    --light-grey: rgb(237, 237, 237); 
+    --drop-shadow-grey: rgb(216, 216, 216) 
+}
+
+
+/* BEGIN USER STYLING */
+
+
+
+html {
+    width: 100%;
+    background-color: var(--light-grey);
+    font-family: 'Noto Sans KR', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    /* width: 100%; */
+    background-color: var(--light-grey);
+    line-height: 2;
+}
+
+main {
+    display: grid;
+    column-gap: 3rem;
+    row-gap: 2rem;
+    margin: 2rem;
+}
+
+sup {
+    vertical-align: top;
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+/* Headers */
+
+header {
+    grid-column: 1 / span 2;
+    background-color: whitesmoke;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-left: 2rem;
+    font-family: 'Noto Serif KR', serif;
+}
+
+h1 p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+p {
+    font-weight: 200;
+}
+
+/* **************************************** */
+/* indicator table and hofstede indicator images */
+
+.indicator-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(243 243 243);
+    border: 3px solid rgb(216, 215, 215);
+    border-radius: 5px;
+}
+
+.indicator-table h4, .indicator-table p {
+    padding: .5rem;
+}
+
+.indicator-table > div {
+    padding: 0 0 .5rem 0;
+}
+
+#hofstede-indicator-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#indicator-key {
+    background-color: rgba(217, 152, 152, 0.48);
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+/* **************************************** */
+
+/* default list styles */
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+
+li {
+    margin-left: 1rem;
+}
+
+ul li {
+    margin-left: 0;
+}
+
+.list {
+
+}
+
+ol {
+    list-style-type: numeric;
+}
+
+ol li {
+    /* text-indent: -.75em; */
+}
+
+ol li::marker {
+    padding-left: 10px;
+}
+
+
+.default-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.small-gap {
+    gap: .5rem;
+}
+
+.gap {
+    gap: 1rem;
+}
+
+.big-gap {
+    gap: 2rem;
+}
+
+
+.row {
+    flex-direction: row;
+}
+
+.center {
+    align-items: center;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+}
+
+.orange {
+    background-color: #F28000;
+}
+
+.dark-blue {
+    background-color: #126B6B;
+}
+
+.default-margin {
+    margin: 1rem;
+}
+
+.margin-left {
+    margin-left: 1rem;
+}
+
+
+
+main {
+    order: 2;
+}
+
+/* Citations */
+
+.citations {
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.citations li {
+    padding-left: 1rem;
+    text-indent: -1rem;
+    font-family: serif;
+}
+
+.italics {
+    font-style: italic;
+}
+
+strong {
+    font-weight: 400;
+}
+
+section {
+    gap: 3rem;
+}
+
+a:hover {
+    color: rgb(255, 89, 0);
+    transition: all 250ms;
+}
+
+@media (min-width: 600px) {
+    main {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    picture {
+    }
+
+    #indicator-table {
+    }
+
+    #hofstede-indicator-img {
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+    }
+    main {
+        width: 800px;
+        grid-template-columns: auto;
+    }
+
+
+    ul {
+        margin-left: 1rem;
+    }
+
+
+    .post-title {
+        grid-column-start: 2;
+    }
+
+    section {
+        grid-column-start: 2;
+    }
+
+    div {
+    }
+    .container {
+        grid-column-start: 2;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+    }
+    
+    picture {
+    }
+
+    .indicator-section {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #indicator-table p {
+    }
+
+    #hofstede-indicator-img {
+    }
+
+
+    .posts {
+        order: 1;
+        top: 1rem;
+        position: sticky;
+        align-self: start;
+        border-radius: 8px;
+        box-shadow: 1px 1px 20px var(--drop-shadow-grey);
+        grid-column-start: 1;
+        width: 250px;
+        height: 450px;
+        overflow: scroll;
+        background-color: whitesmoke;
+        border: 1rem solid whitesmoke;
+    }
+
+    .posts h2 {
+        position: sticky;
+        top: 0;
+        margin: 0;
+        background-color: whitesmoke;
+    }
+}
