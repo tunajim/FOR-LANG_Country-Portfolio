@@ -341,7 +341,6 @@ a:hover {
     }
     main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
         column-gap: 2rem;
         width: 800px;
     }
